@@ -1,0 +1,41 @@
+{
+  "name": "starter-pack",
+  "version": "1.0.0",
+  "description": "Starter Pack",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Perlier Léo",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-external-helpers": "latest",
+    "babel-preset-es2015": "latest",
+    "babel-preset-es2015-rollup": "latest",
+    "browser-sync": "latest",
+    "del": "latest",
+    "fastclick": "latest",
+    "gulp": "latest",
+    "gulp-autoprefixer": "latest",
+    "gulp-clean-css": "latest",
+    "gulp-concat": "latest",
+    "gulp-imagemin": "latest",
+    "gulp-newer": "latest",
+    "gulp-rename": "latest",
+    "gulp-sass": "latest",
+    "gulp-sourcemaps": "latest",
+    "gulp-uglify": "latest",
+    "gutil": "latest",
+    "rollup-plugin-babel": "latest",
+    "rollup-plugin-commonjs": "latest",
+    "rollup-plugin-node-resolve": "latest",
+    "rollup-plugin-uglify": "latest",
+    "rollup-stream": "latest",
+    "sniffer": "github:watsondg/sniffer",
+    "vinyl-buffer": "latest",
+    "vinyl-source-stream": "latest"
+  },
+  "dependencies": {}
+}

@@ -1,0 +1,52 @@
+/* -----
+Basic Mixin'
+----- */
+
+@mixin size($width, $height){
+  width: $width;
+  height: $height;
+}
+
+@mixin center-block(){
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+@mixin fluid(){
+	max-width: 100%;
+	height: auto;
+}
+
+@mixin absolute(){
+     position: absolute;
+     top: 0; right: 0; bottom: 0; left:0;
+     margin: auto;
+}
+@mixin fixed(){
+     position: fixed;
+     top: 0; right: 0; bottom: 0; left:0;
+     margin: auto;
+}
+
+@mixin clip-path($clip) {
+  clip-path: $clip;
+}
+
+@mixin cols() {
+	display:flex;
+	align-items:flex-start;
+	justify-content:flex-start;
+}
+
+
+/* -----
+Hover
+----- */
+
+@mixin hover-color($color){
+  &:hover{color: $color;}
+}
+@mixin hover-bg($color){
+  &:hover{background-color: $color;}
+}
