@@ -8,8 +8,14 @@ $base-fonts:"../fonts/";
 Colors
 ----- */
 $white: #ffffff;
-$black: #101010;
+$black: #1a1a1a;
+$grey: #999999;
+$gray: #999999;
 $base: $black;
+
+$principaleColor: $black;
+$secondColor: $grey;
+
 
 /* -----
 CSS Easings

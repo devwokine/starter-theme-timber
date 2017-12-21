@@ -1,0 +1,27 @@
+.legals{
+	padding-top: 200px;
+	padding-bottom:100px;
+	.legals-mentions, .credits{
+		text-align: left;
+		.container{
+			max-width: 690px;
+			margin-left: auto;
+			margin-right: auto;	
+
+		}
+		h1,h2,h3,h4,h5{
+			color: $principaleColor;
+		}
+		p, ul, ol{
+			margin-left: auto;
+			margin-right: auto;
+			margin-bottom: 30px;
+			&.chapo{
+				margin-bottom: 60px;
+				@media (max-width: $tabletSmall){
+					margin-bottom: 30px;
+				}
+			}
+		}
+	}
+}
