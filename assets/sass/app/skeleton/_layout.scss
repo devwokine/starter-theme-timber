@@ -9,9 +9,11 @@ body {
 }
 
 body {
+
 	font-family:$lato;
 	color:$base;
   background:$white;
+  font-size:1.3rem;
 
   &.is-loading {
     overflow:hidden;
@@ -20,6 +22,33 @@ body {
 
 }
 
-.app {
-  overflow:hidden;
+#barba-wrapper {
+  min-height:50vh;
+  overflow:visible;
+  position: relative;
+  z-index:10;
+}
+
+.container {
+
+  width:100%;
+  max-width:1440px;
+  margin-left:auto;
+  margin-right:auto;
+  padding:0 40px;
+  position: relative;
+
+  @media screen and (min-width:$tabletSmall) {
+    width:85%;
+    padding:0 80px;
+  }
+
+  @media screen and (min-width:$desk) {
+    width:80%;
+  }
+
+}
+
+*[data-prllx] {
+  will-change:transform;
 }

@@ -1,0 +1,36 @@
+h1 {
+  margin-bottom: 40px;
+}
+
+h2 {
+  margin-bottom:20px;
+}
+
+h3 {
+  margin-bottom:15px;
+}
+
+p {
+  margin-bottom:20px;
+}
+
+
+
+.wswyg--content {
+
+  > *+* {
+    margin-top:30px;
+  }
+
+  p {
+    margin:0px;
+  }
+
+  ul {
+    padding-left:40px;
+    li+li {
+      margin-top:5px;
+    }
+  }
+
+}

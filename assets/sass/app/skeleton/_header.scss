@@ -1,0 +1,77 @@
+body > header {
+
+  .container {
+
+    display:flex;
+    align-items:center;
+    padding-top:40px;
+    padding-bottom:40px;
+
+  }
+
+  .brand {
+
+    margin-right:auto;
+
+  }
+
+  .toggle__menu {
+
+    margin-left:auto;
+    background:none;
+    border:none;
+    padding:10px;
+
+    @media screen and (min-width:$tablet) {
+      display:none;
+    }
+
+    .icon {
+
+        .line {
+          display:block;
+          height:3px;
+          width:20px;
+          background:$base;
+          &+.line {
+            margin-top:4px;
+          }
+        }
+
+    }
+
+  }
+
+  nav {
+
+    margin-left:auto;
+    display:none;
+    @media screen and (min-width:$tablet) {
+      display:block;
+    }
+
+    .nav__main {
+
+      list-style-type: none;
+      margin:0px;
+      padding:0px;
+
+      .nav__item {
+        display:inline-block;
+        &+.nav__item {
+          margin-left:40px;
+        }
+      }
+
+    }
+
+  }
+
+}
+
+
+body.showMenu > header {
+  nav {
+    display:block;
+  }
+}

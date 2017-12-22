@@ -10,7 +10,6 @@ export function onLoadedMetadata(e) {
 
 }
 
-
 export function resizeVideo(video) {
 
   let newWidth;
@@ -32,18 +31,49 @@ export function resizeVideo(video) {
 
 }
 
+export function delay(ms){
+    var ctr, rej, p = new Promise(function (resolve, reject) {
+        ctr = setTimeout(resolve, ms);
+        rej = reject;
+    });
+    p.cancel = function(){ clearTimeout(ctr); rej(Error("Cancelled"))};
+    return p;
+}
+
+export function randomInt(min,max) {
+    return Math.floor(Math.random()*(max-min+1)+min);
+}
 
 export function normalize(value, min, max) {
   return (value - min) / (max - min);
 }
 
-
 export function clamp(value, min, max) {
   return value < min ? min : (value > max ? max : value);
 }
 
+export function simulateClick(elem) {
 
-(function () {
-    if ( typeof NodeList.prototype.forEach === "function" ) return false;
-    NodeList.prototype.forEach = Array.prototype.forEach;
-})();
+    var evt = new MouseEvent('click', {
+        bubbles: true,
+        cancelable: true,
+        view: window
+    });
+
+    var canceled = !elem.dispatchEvent(evt);
+
+};
+
+export function mouseMovefn(e) {
+
+  let xMouse = e.pageX - e.currentTarget.getBoundingClientRect().left - ( e.currentTarget.offsetWidth / 2 );
+  let yMouse = e.pageY - window.pageYOffset - e.currentTarget.getBoundingClientRect().top - ( e.currentTarget.offsetHeight / 2 );
+  const mouseElements = e.currentTarget.querySelectorAll('*[data-mouse-parallax]');
+  mouseElements.forEach(elem => {
+    var factor = elem.getAttribute('data-mouse-parallax');
+    let xFinal = xMouse * factor;
+    let yFinal = yMouse * factor;
+    TweenMax.to(elem, 1.2, {x:xFinal, y:yFinal});
+  });
+
+}

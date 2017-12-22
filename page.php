@@ -9,16 +9,17 @@
 
 	$siteData = json_decode(file_get_contents('./data/site.json'), true);
 	$themeData = json_decode(file_get_contents('./data/theme.json'), true);
+	$menuData = json_decode(file_get_contents('./data/menu.json'), true);
 
-	echo $twig->render('pages/page-legals.twig', ['site' => $siteData, 'theme' => $themeData]);
+	echo $twig->render('pages/page.twig', ['site' => $siteData, 'theme' => $themeData, 'menu' => $menuData]);
 
 
 /**
- * Template Name: Mentions legales
+ * Template Name: Page
  */
 /*
-$context = Timber::get_context();
 
+$context = Timber::get_context();
 Timber::render('pages/page-legals.twig', $context);
 
 ?>

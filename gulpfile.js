@@ -1,4 +1,4 @@
-const SITE_URL = 'http://project.dev.wokine.com';
+const SITE_URL = 'http://localhost/starter-theme-timber/';
 
 const gulp = require('gulp')
 const del = require('del')

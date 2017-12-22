@@ -1,0 +1,19 @@
+{
+    "items" : [
+      {
+        "title" : "Home",
+        "slug" : "home",
+        "link" : "index.php"
+      },
+      {
+        "title" : "404",
+        "slug" : "404",
+        "link" : "404.php"
+      },
+      {
+        "title" : "Page",
+        "slug" : "page",
+        "link" : "page.php"
+      }
+    ]
+}

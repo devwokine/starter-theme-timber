@@ -29,8 +29,38 @@
 	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 	<link rel="stylesheet" href="{{ theme.link }}/build/css/app.min.css">
 
+	<script src="{{ theme.link }}/build/js/sniffer.min.js"></script>
+
 </head>
 
 <body class="is-loading {{body_class}}">
 
-	<div class="app">
+	<header>
+
+		<div class="container">
+
+			<a href="{{ site.url }}" class="brand">Brand</a>
+
+			<nav>
+				<ul class="nav__main">
+					{% for item in menu.items %}
+						<li class="nav__item {% if page.slug == item.slug %}active{% endif %}" data-slug="{{ item.slug }}">
+								<a class="nav__link" href="{{ item.link }}">
+									<span>{{ item.title }}</span>
+								</a>
+						</li>
+					{% endfor %}
+				</ul>
+			</nav>
+
+			<button class="toggle__menu">
+				<i class="icon">
+					<span class="line"></span>
+					<span class="line"></span>
+					<span class="line"></span>
+				</i>
+			</button>
+
+		</div>
+
+	</header>

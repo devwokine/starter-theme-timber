@@ -2,16 +2,11 @@
 
 {% block content %}
 
-
-{{site.theme}}
-
-<main>
-	<div class="error-page">
-		<div class="container">
-			<h1>404</h1>
-			<p>La page n'a pas été trouvée.</p>
-			<a href="{{site.url}}/">Retour à l'accueil</a>
-		</div>
+<main class="barba-container page page--404" data-namespace="page-404">
+	<div class="container">
+		<h1>404</h1>
+		<p>La page n'a pas été trouvée.</p>
+		<a href="{{site.url}}">Retour à l'accueil</a>
 	</div>
 </main>
 

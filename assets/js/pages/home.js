@@ -1,5 +1,23 @@
 export function initHome() {
 
-	console.log('Init Home');
+	var Home = Barba.BaseView.extend({
+
+		namespace: 'page-home',
+
+		onEnter: function() {
+
+			console.log('Init Home');
+
+		},
+
+		onLeaveCompleted: function() {
+
+
+
+		}
+
+	})
+
+	Home.init();
 
 }
