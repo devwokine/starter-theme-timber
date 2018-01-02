@@ -22,7 +22,7 @@ body > header {
     border:none;
     padding:10px;
 
-    @media screen and (min-width:$tablet) {
+    @media screen and (min-width:$menuBreakpoint) {
       display:none;
     }
 
@@ -46,7 +46,7 @@ body > header {
 
     margin-left:auto;
     display:none;
-    @media screen and (min-width:$tablet) {
+    @media screen and (min-width:$menuBreakpoint) {
       display:block;
     }
 
