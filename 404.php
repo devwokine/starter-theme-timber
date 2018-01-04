@@ -13,14 +13,12 @@
 
 	echo $twig->render('pages/page-404.twig', ['site' => $siteData, 'theme' => $themeData, 'menu' => $menuData]);
 
-
-/**
- * Template Name: Page 404
- */
 /*
-$context = Timber::get_context();
 
+$context = Timber::get_context();
+$context['page'] = new TimberPost();
 Timber::render('pages/page-404.twig', $context);
 
+*/
+
 ?>
- */

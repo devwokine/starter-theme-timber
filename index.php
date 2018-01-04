@@ -14,13 +14,17 @@
 	echo $twig->render('pages/home.twig', ['site' => $siteData, 'theme' => $themeData, 'menu' => $menuData]);
 
 
-/**
- * Template Name: Home
- */
-/*
-$context = Timber::get_context();
 
-Timber::render('home/home.twig', $context);
+	/**
+	 * Template Name: Home
+	 */
+
+	/*
+
+	$context = Timber::get_context();
+	$context['page'] = new TimberPost();
+	Timber::render('pages/home.twig', $context);
+
+	*/
 
 ?>
- */

@@ -13,14 +13,12 @@
 
 	echo $twig->render('pages/page.twig', ['site' => $siteData, 'theme' => $themeData, 'menu' => $menuData]);
 
-
-/**
- * Template Name: Page
- */
 /*
 
-$context = Timber::get_context();
-Timber::render('pages/page-legals.twig', $context);
+	$context = Timber::get_context();
+	$context['page'] = new TimberPost();
+	Timber::render('pages/page.twig', $context);
+
+*/
 
 ?>
- */
