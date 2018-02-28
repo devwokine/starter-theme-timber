@@ -90,13 +90,10 @@ class App {
 			  const pageOut = new TimelineMax({ paused:true, onComplete:()=>{
 
           //Close Menu if Open
-          /*if(header.menuOpen){
-            if (window.Sniff.features.mobile) {
-              utils.simulateClick(header.DOM.toggle);
-            } else {
-              header.DOM.toggle.click();
-            }
-          }*/
+          if(header.menuOpen){
+            var click = new Event('click');
+            header.DOM.toggle.dispatchEvent(click);
+          }
 
           window.scrollTo(0,0);
 				  deferred.resolve();
