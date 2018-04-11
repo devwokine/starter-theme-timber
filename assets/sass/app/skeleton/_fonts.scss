@@ -1,3 +1,13 @@
+body{
+  text-rendering: optimizeLegibility;
+  font-smoothing: antialiased;
+}
+abbr[title] {
+  border-bottom: none;
+  text-decoration: none;
+  cursor: initial;
+}
+
 h1 {
   margin-bottom: 40px;
 }
@@ -13,8 +23,6 @@ h3 {
 p {
   margin-bottom:20px;
 }
-
-
 
 .wswyg--content {
 

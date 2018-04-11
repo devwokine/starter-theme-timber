@@ -6,7 +6,7 @@ export function initPage() {
 
 		onEnter: function() {
 
-			console.log('Init Page');
+			//console.log('Init Page');
 
 		},
 

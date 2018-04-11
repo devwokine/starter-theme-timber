@@ -92,7 +92,7 @@ class App {
           //Close Menu if Open
           if(header.menuOpen){
             var click = new Event('click');
-            header.DOM.toggle.dispatchEvent(click);
+            header.DOM.toggleClose.dispatchEvent(click);
           }
 
           window.scrollTo(0,0);
