@@ -39,6 +39,11 @@ Basic Mixin'
 	justify-content:flex-start;
 }
 
+@mixin noPseudoElements(){
+  &::before, &::after{
+    display: none;
+  }
+}
 
 /* -----
 Hover

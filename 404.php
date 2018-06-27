@@ -16,7 +16,6 @@
 /*
 
 $context = Timber::get_context();
-$context['page'] = new TimberPost();
 Timber::render('pages/page-404.twig', $context);
 
 */

@@ -6,7 +6,7 @@ export function initHome() {
 
 		onEnter: function() {
 
-			console.log('Init Home');
+			//console.log('Init Home');
 
 		},
 

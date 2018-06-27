@@ -11,7 +11,7 @@
 	$themeData = json_decode(file_get_contents('./data/theme.json'), true);
 	$menuData = json_decode(file_get_contents('./data/menu.json'), true);
 
-	echo $twig->render('pages/home.twig', ['site' => $siteData, 'theme' => $themeData, 'menu' => $menuData]);
+	echo $twig->render('pages/front-page.twig', ['site' => $siteData, 'theme' => $themeData, 'menu' => $menuData]);
 
 
 
@@ -22,8 +22,7 @@
 	/*
 
 	$context = Timber::get_context();
-	$context['page'] = new TimberPost();
-	Timber::render('pages/home.twig', $context);
+	Timber::render('pages/front-page.twig', $context);
 
 	*/
 
