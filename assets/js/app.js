@@ -152,7 +152,7 @@ class App {
 	  prllxs.forEach((item) => {
 
 		    let prllxTL = new TimelineMax({ paused: true});
-        TweenMax.set(item, { y: -1 * item.getAttribute('data-prllx') });
+        if (!item.getAttribute('data-prllxSimple')) TweenMax.set(item, { y: -1 * item.getAttribute('data-prllx') });
   	    prllxTL.to(item, 1, { y:item.getAttribute('data-prllx'), overwrite:"all", ease:Power0.easeNone });
 		    TLPrllxs.push(prllxTL);
 
@@ -162,7 +162,8 @@ class App {
 
 	    prllxs.forEach((item, index) => {
         let from = item.getBoundingClientRect().top + this.sy - window.innerHeight ;
-	      let norm = utils.clamp(utils.normalize(sy,  from ,  item.getBoundingClientRect().top + this.sy + item.offsetHeight), 0, 1);
+        if ( from < 0 ) from = 0;
+	      let norm = utils.clamp(utils.normalize(this.sy,  from ,  item.getBoundingClientRect().top + this.sy + item.offsetHeight), 0, 1);
 		    TLPrllxs[index].progress(norm);
 	    });
 
