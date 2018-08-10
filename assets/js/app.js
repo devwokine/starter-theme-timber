@@ -162,7 +162,7 @@ class App {
 
 	    prllxs.forEach((item, index) => {
         let from = item.getBoundingClientRect().top + this.sy - window.innerHeight ;
-	      let norm = utils.clamp(utils.normalize(sy,  from ,  item.getBoundingClientRect().top + this.sy + item.offsetHeight), 0, 1);
+	      let norm = utils.clamp(utils.normalize(this.sy,  from ,  item.getBoundingClientRect().top + this.sy + item.offsetHeight), 0, 1);
 		    TLPrllxs[index].progress(norm);
 	    });
 
